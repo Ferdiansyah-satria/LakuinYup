@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakuin Yup - Barang Bekas, Nilai Tetap Berkelas</title>
+    <meta name="description" content="Platform jual beli barang bekas terpercaya, terkurasi, aman, dan ramah lingkungan.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#14b8a6', // Tosca
+                        secondary: '#facc15', // Kuning
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 1. NAVBAR -->
+    <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#beranda" class="text-2xl font-bold text-primary flex items-center gap-2">
+                        <i class="fa-solid fa-bag-shopping"></i> Lakuin Yup
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center font-medium">
+                    <a href="#beranda" class="hover:text-primary transition">Beranda</a>
+                    <a href="#tentang" class="hover:text-primary transition">Tentang</a>
+                    <a href="#katalog" class="hover:text-primary transition">Katalog</a>
+                    <a href="#faq" class="hover:text-primary transition">Syarat & Ketentuan</a>
+                    <a href="#" onclick="openWhatsAppChat()" class="bg-primary text-white px-4 py-2 rounded-full font-medium hover:bg-teal-700 transition shadow-sm">
+                        <i class="fa-brands fa-whatsapp mr-1"></i> Chat Now
+                    </a>
+                </div>
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 hover:text-primary focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-4 pt-2 pb-4 space-y-3">
+            <a href="#beranda" class="block py-2 text-gray-700 hover:text-primary">Beranda</a>
+            <a href="#tentang" class="block py-2 text-gray-700 hover:text-primary">Tentang</a>
+            <a href="#katalog" class="block py-2 text-gray-700 hover:text-primary">Katalog</a>
+            <a href="#faq" class="block py-2 text-gray-700 hover:text-primary">Syarat & Ketentuan</a>
+            <a href="#" onclick="openWhatsAppChat()" class="block text-center bg-primary text-white py-2 rounded-lg font-medium hover:bg-teal-700">
+                <i class="fa-brands fa-whatsapp mr-1"></i> Chat Now
+            </a>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <section id="beranda" class="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-teal-50 via-white to-yellow-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center md:text-left">
+                    <span class="bg-teal-100 text-primary text-xs sm:text-sm font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                        #PilihanCerdas & Hemat
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
+                        Barang Bekas, <span class="text-primary">Nilai Tetap Berkelas</span>
+                    </h1>
+                    <p class="text-lg text-gray-600">
+                        Platform jual beli barang preloved pilihan. Temukan barang berkualitas dengan harga ramah di kantong, sekaligus dukung gaya hidup berkelanjutan.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                        <a href="#katalog" class="bg-primary text-white px-6 py-3 rounded-xl font-semibold text-center hover:bg-teal-700 transition shadow-lg shadow-teal-500/20">
+                            Lihat Katalog
+                        </a>
+                        <a href="#" onclick="openWhatsAppChat()" class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-xl font-semibold text-center hover:bg-yellow-500 transition shadow-lg shadow-yellow-400/20">
+                            <i class="fa-brands fa-whatsapp mr-1"></i> Chat Now
+                        </a>
+                    </div>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="w-full max-w-md bg-white p-4 rounded-3xl shadow-xl border border-gray-100 relative">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Preloved Items" class="rounded-2xl w-full h-64 object-cover">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border border-gray-100 flex items-center gap-3">
+                            <div class="bg-teal-100 text-primary p-3 rounded-xl text-xl">
+                                <i class="fa-solid fa-shield-check"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Jaminan Kualitas</p>
+                                <p class="font-bold text-gray-800">100% Terkurasi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ABOUT (TENTANG KAMI) -->
+    <section id="tentang" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Tentang Lakuin Yup</h2>
+                <p class="text-gray-600">
+                    Lakuin Yup hadir sebagai solusi terpercaya bagi mahasiswa, keluarga, kolektor, dan masyarakat umum yang ingin memperpanjang siklus hidup barang layak pakai dengan cara yang mudah, aman, dan menyenangkan.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Kartu Keunggulan 1 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition text-center">
+                    <div class="w-12 h-12 bg-teal-100 text-primary rounded-xl flex items-center justify-center text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Barang Terkurasi</h3>
+                    <p class="text-sm text-gray-600">Setiap barang telah melalui pengecekan kondisi fisik dan fungsi secara teliti.</p>
+                </div>
+                <!-- Kartu Keunggulan 2 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition text-center">
+                    <div class="w-12 h-12 bg-teal-100 text-primary rounded-xl flex items-center justify-center text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Harga Terjangkau</h3>
+                    <p class="text-sm text-gray-600">Dapatkan barang berkualitas tinggi dengan harga jauh lebih hemat.</p>
+                </div>
+                <!-- Kartu Keunggulan 3 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition text-center">
+                    <div class="w-12 h-12 bg-teal-100 text-primary rounded-xl flex items-center justify-center text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Transaksi Aman</h3>
+                    <p class="text-sm text-gray-600">Proses pembelian terarah langsung melalui admin WhatsApp resmi kami.</p>
+                </div>
+                <!-- Kartu Keunggulan 4 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition text-center">
+                    <div class="w-12 h-12 bg-teal-100 text-primary rounded-xl flex items-center justify-center text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Ramah Lingkungan</h3>
+                    <p class="text-sm text-gray-600">Mendukung gerakan kurangi limbah dengan memperpanjang masa pakai barang.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CATALOG (KATALOG BARANG) -->
+    <section id="katalog" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Katalog Pilihan</h2>
+                <p class="text-gray-600">Cari barang preloved impianmu di sini</p>
+            </div>
+
+            <!-- Filter & Search Bar -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+                <!-- Kategori Filter -->
+                <div id="category-filters" class="flex flex-wrap gap-2 justify-center">
+                    <button onclick="filterCategory('Semua')" class="cat-btn active px-4 py-2 rounded-xl text-sm font-medium bg-primary text-white shadow-sm transition">Semua</button>
+                    <button onclick="filterCategory('Elektronik')" class="cat-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-gray-700 border hover:bg-gray-100 transition">Elektronik</button>
+                    <button onclick="filterCategory('Fashion')" class="cat-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-gray-700 border hover:bg-gray-100 transition">Fashion</button>
+                    <button onclick="filterCategory('Furnitur')" class="cat-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-gray-700 border hover:bg-gray-100 transition">Furnitur</button>
+                    <button onclick="filterCategory('Hobi')" class="cat-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-gray-700 border hover:bg-gray-100 transition">Hobi</button>
+                </div>
+                <!-- Kolom Pencarian -->
+                <div class="w-full md:w-72">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                            <i class="fa-solid fa-search"></i>
+                        </span>
+                        <input type="text" id="search-input" onkeyup="searchProducts()" placeholder="Cari nama barang..." class="w-full pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid Produk -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Produk dirender otomatis via JavaScript -->
+            </div>
+            
+            <!-- Pesan Jika Kosong -->
+            <div id="no-product" class="hidden text-center py-12">
+                <p class="text-gray-500 font-medium">Barang yang kamu cari tidak ditemukan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SYARAT & KETENTUAN (ACCORDION) -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Syarat & Ketentuan</h2>
+                <p class="text-gray-600">Panduan transaksi aman dan nyaman di Lakuin Yup</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- Accordion Item 1 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800 bg-gray-50 hover:bg-gray-100 transition">
+                        <span>1. Ketentuan Umum</span>
+                        <i id="icon-1" class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="content-1" class="hidden p-5 text-sm text-gray-600 bg-white border-t border-gray-100">
+                        Semua transaksi jual beli preloved di Lakuin Yup dilakukan secara transparan. Pembeli wajib membaca deskripsi dan detail kondisi barang sebelum melakukan pemesanan via WhatsApp admin.
+                    </div>
+                </div>
+
+                <!-- Accordion Item 2 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800 bg-gray-50 hover:bg-gray-100 transition">
+                        <span>2. Kondisi Barang</span>
+                        <i id="icon-2" class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="content-2" class="hidden p-5 text-sm text-gray-600 bg-white border-t border-gray-100">
+                        Barang yang dijual adalah barang bekas (preloved). Tingkat kemulusan (misal: 90%, 95%) dijelaskan secara jujur pada deskripsi produk. Silakan tanyakan detail tambahan melalui chat jika diperlukan.
+                    </div>
+                </div>
+
+                <!-- Accordion Item 3 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800 bg-gray-50 hover:bg-gray-100 transition">
+                        <span>3. Pembayaran</span>
+                        <i id="icon-3" class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="content-3" class="hidden p-5 text-sm text-gray-600 bg-white border-t border-gray-100">
+                        Pembayaran dilakukan melalui transfer bank resmi atau e-wallet yang diinformasikan langsung oleh Admin Lakuin Yup setelah konfirmasi ketersediaan stok barang.
+                    </div>
+                </div>
+
+                <!-- Accordion Item 4 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleAccordion(4)" class="w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800 bg-gray-50 hover:bg-gray-100 transition">
+                        <span>4. Pengiriman</span>
+                        <i id="icon-4" class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="content-4" class="hidden p-5 text-sm text-gray-600 bg-white border-t border-gray-100">
+                        Pengiriman barang dilakukan menggunakan jasa kurir terpercaya dari kota asal pengiriman. Biaya pengiriman ditanggung sepenuhnya oleh pembeli kecuali ada promo khusus.
+                    </div>
+                </div>
+
+                <!-- Accordion Item 5 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleAccordion(5)" class="w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800 bg-gray-50 hover:bg-gray-100 transition">
+                        <span>5. Retur / Refund</span>
+                        <i id="icon-5" class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="content-5" class="hidden p-5 text-sm text-gray-600 bg-white border-t border-gray-100">
+                        Retur atau refund hanya dapat dilakukan jika barang yang diterima terbukti mengalami kerusakan fatal yang tidak sesuai dengan deskripsi awal, serta wajib menyertakan video unboxing tanpa jeda.
+                    </div>
+                </div>
+
+                <!-- Accordion Item 6 -->
+                <div class="border border-gray-200 rounded-2xl overflow-hidden">
+                    <button onclick="toggleAccordion(6)" class="w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800 bg-gray-50 hover:bg-gray-100 transition">
+                        <span>6. Privasi Data</span>
+                        <i id="icon-6" class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="content-6" class="hidden p-5 text-sm text-gray-600 bg-white border-t border-gray-100">
+                        Data pribadi seperti nama, nomor telepon, dan alamat pengiriman hanya digunakan untuk keperluan transaksi dan pengiriman barang, serta dijamin kerahasiaannya.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="#" onclick="openWhatsAppChat()" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-xl hover:bg-green-600 transition z-50 animate-bounce" title="Chat WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- 7. FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-bag-shopping text-primary"></i> Lakuin Yup
+                    </h3>
+                    <p class="text-sm text-gray-400">
+                        Platform jual beli barang bekas pilihan yang terkurasi, terjangkau, aman, dan ramah lingkungan.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold text-white mb-3">Menu Cepat</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#beranda" class="hover:text-primary transition">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-primary transition">Tentang Kami</a></li>
+                        <li><a href="#katalog" class="hover:text-primary transition">Katalog Produk</a></li>
+                        <li><a href="#faq" class="hover:text-primary transition">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold text-white mb-3">Kontak Admin</h4>
+                    <p class="text-sm text-gray-400 mb-2"><i class="fa-brands fa-whatsapp mr-2 text-green-400"></i> WhatsApp: +62 812-3456-789</p>
+                    <p class="text-sm text-gray-400"><i class="fa-solid fa-envelope mr-2 text-primary"></i> Email: halo@lakuinyup.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                &copy; <span id="current-year"></span> Lakuin Yup. Hak Cipta Dilindungi.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // ==========================================
+        // CONFIGURATION: EDIT NOMOR WHATSAPP DI SINI
+        // ==========================================
+        const ADMIN_WHATSAPP_NUMBER = "628123456789"; // Ganti dengan nomor WhatsApp Anda (format internasional tanpa + atau 0)
+
+        // Data Produk Katalog (Bisa diedit atau ditambah sesuai kebutuhan)
+        const productsData = [
+            {
+                id: 1,
+                name: "Kamera Mirrorless Sony A6000",
+                category: "Elektronik",
+                condition: "92% Mulus",
+                price: 4750000,
+                image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=500&q=80",
+                description: "Normal jaya, kelengkapan body, lensa kit 16-50mm, strap, dan baterai."
+            },
+            {
+                id: 2,
+                name: "Hoodie Vintage Oversized",
+                category: "Fashion",
+                condition: "95% Seperti Baru",
+                price: 150000,
+                image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=500&q=80",
+                description: "Bahan cotton fleece tebal, warna pekat tidak luntur, ukuran L."
+            },
+            {
+                id: 3,
+                name: "Meja Kerja Minimalis Kayu Jati",
+                category: "Furnitur",
+                condition: "90% Kokoh",
+                price: 650000,
+                image: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=500&q=80",
+                description: "Kondisi kuat, ada sedikit lecet pemakaian wajar di bagian kaki meja."
+            },
+            {
+                id: 4,
+                name: "Gitar Akustik Elektrik Yamaha",
+                category: "Hobi",
+                condition: "93% Mulus",
+                price: 950000,
+                image: "https://images.unsplash.com/photo-1510915361894-db8b6010cb61?auto=format&fit=crop&w=500&q=80",
+                description: "Sound nyaring, EQ aktif normal, senar baru diganti."
+            },
+            {
+                id: 5,
+                name: "Headphone Bluetooth Noise Cancelling",
+                category: "Elektronik",
+                condition: "98% Like New",
+                price: 750000,
+                image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80",
+                description: "Baterai sangat awet, suara jernih bass mantap, lengkap dus buku."
+            },
+            {
+                id: 6,
+                name: "Sneakers Casual Streetwear",
+                category: "Fashion",
+                condition: "88% Layak Pakai",
+                price: 250000,
+                image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80",
+                description: "Ukuran 42, sol masih tebal, sudah dicuci bersih siap pakai."
+            },
+            {
+                id: 7,
+                name: "Lampu Meja Belajar Estetik",
+                category: "Furnitur",
+                condition: "96% Berfungsi",
+                price: 90000,
+                image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=500&q=80",
+                description: "Lampu LED tiga mode warna cahaya, fleksibel dan modern."
+            },
+            {
+                id: 8,
+                name: "Boardgame Strategi Koleksi",
+                category: "Hobi",
+                condition: "99% Lengkap",
+                price: 320000,
+                image: "https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=500&q=80",
+                description: "Komponen kartu lengkap ber-sleeves, kotak mulus tidak penyok."
+            }
+        ];
+
+        let currentCategory = 'Semua';
+        let searchQuery = '';
+
+        // Tampilkan tahun berjalan di footer
+        document.getElementById('current-year').innerText = new Date().getFullYear();
+
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Format angka ke Rupiah
+        function formatRupiah(angka) {
+            return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(angka);
+        }
+
+        // Render Produk ke Grid
+        function renderProducts() {
+            const grid = document.getElementById('product-grid');
+            const noProduct = document.getElementById('no-product');
+            grid.innerHTML = '';
+
+            const filtered = productsData.filter(product => {
+                const matchCategory = currentCategory === 'Semua' || product.category === currentCategory;
+                const matchSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchCategory && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                noProduct.classList.remove('hidden');
+                return;
+            } else {
+                noProduct.classList.add('hidden');
+            }
+
+            filtered.forEach(product => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col justify-between";
+                card.innerHTML = `
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-gray-100">
+                            <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-semibold px-2.5 py-1 rounded-lg">
+                                ${product.category}
+                            </span>
+                            <span class="absolute top-3 right-3 bg-teal-600 text-white text-xs font-semibold px-2.5 py-1 rounded-lg">
+                                ${product.condition}
+                            </span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 text-base mb-1 line-clamp-1">${product.name}</h3>
+                            <p class="text-xs text-gray-500 mb-3 line-clamp-2">${product.description}</p>
+                            <p class="text-lg font-bold text-primary">${formatRupiah(product.price)}</p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <button onclick="askProduct('${product.name}', ${product.price})" class="w-full bg-gray-100 hover:bg-primary hover:text-white text-gray-800 text-sm font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Tanya Barang Ini
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter Kategori
+        function filterCategory(category) {
+            currentCategory = category;
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                if(btn.textContent.trim() === category) {
+                    btn.classList.add('bg-primary', 'text-white', 'shadow-sm');
+                    btn.classList.remove('bg-white', 'text-gray-700', 'border');
+                } else {
+                    btn.classList.remove('bg-primary', 'text-white', 'shadow-sm');
+                    btn.classList.add('bg-white', 'text-gray-700', 'border');
+                }
+            });
+            renderProducts();
+        }
+
+        // Search Produk
+        function searchProducts() {
+            searchQuery = document.getElementById('search-input').value;
+            renderProducts();
+        }
+
+        // Tombol Chat Umum via WhatsApp
+        function openWhatsAppChat() {
+            const message = encodeURIComponent("Halo Admin Lakuin Yup, saya ingin bertanya seputar produk preloved.");
+            window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
+        }
+
+        // Tombol Tanya Produk Tertentu via WhatsApp
+        function askProduct(productName, productPrice) {
+            const formattedPrice = formatRupiah(productPrice);
+            const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya tertarik dan ingin bertanya mengenai barang "${productName}" dengan harga ${formattedPrice}. Apakah masih tersedia?`);
+            window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
+        }
+
+        // Accordion Toggle S&K
+        function toggleAccordion(id) {
+            const content = document.getElementById(`content-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Inisialisasi render saat halaman dimuat
+        window.onload = () => {
+            renderProducts();
+        };
+    </script>
+</body>
+</html>
