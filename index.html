@@ -71,7 +71,7 @@
         </div>
     </nav>
 
-    <!-- 2. HERO SECTION DENGAN SLIDER 3 FOTO -->
+    <!-- 2. HERO SECTION DENGAN SLIDER 3 FOTO ASLI -->
     <section id="beranda" class="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-teal-50 via-white to-yellow-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -94,22 +94,22 @@
                         </a>
                     </div>
                 </div>
-                <!-- Hero Image Carousel -->
+                <!-- Hero Image Carousel (3 Foto Vans) -->
                 <div class="relative flex justify-center">
                     <div class="w-full max-w-md bg-white p-4 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden">
                         <!-- Carousel Wrapper -->
-                        <div id="hero-carousel" class="relative h-64 rounded-2xl overflow-hidden">
-                            <!-- Slide 1 -->
+                        <div id="hero-carousel" class="relative h-64 rounded-2xl overflow-hidden bg-gray-100">
+                            <!-- Slide 1 (Foto Bagian Dalam/Tag Sepatu) -->
                             <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100">
-                                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Slide 1" class="w-full h-full object-cover">
+                                <img src="URL_FOTO_1_ANDA" alt="Vans Detail 1" class="w-full h-full object-cover">
                             </div>
-                            <!-- Slide 2 -->
+                            <!-- Slide 2 (Foto Box / Label Dus) -->
                             <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
-                                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80" alt="Slide 2" class="w-full h-full object-cover">
+                                <img src="URL_FOTO_2_ANDA" alt="Vans Detail 2" class="w-full h-full object-cover">
                             </div>
-                            <!-- Slide 3 -->
+                            <!-- Slide 3 (Foto Sepatu Keseluruhan) -->
                             <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
-                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Slide 3" class="w-full h-full object-cover">
+                                <img src="URL_FOTO_3_ANDA" alt="Vans Detail 3" class="w-full h-full object-cover">
                             </div>
                         </div>
                         <!-- Carousel Indicators -->
@@ -341,26 +341,26 @@
         // ==========================================
         // CONFIGURATION: EDIT NOMOR WHATSAPP DI SINI
         // ==========================================
-        const ADMIN_WHATSAPP_NUMBER = "628123456789"; // Ganti dengan nomor WhatsApp Anda (format internasional tanpa + atau 0)
+        const ADMIN_WHATSAPP_NUMBER = "628123456789"; // Ganti dengan nomor WhatsApp Anda
 
-        // Data Produk Katalog (Termasuk Vans Authentic terbaru)
+        // Data Produk Katalog (Vans Authentic sebagai produk utama)
         const productsData = [
             {
                 id: 1,
-                name: "Vans Authentic Embroidered Checker Black",
+                name: "Vans Kaji",
                 category: "Fashion",
                 condition: "99% Like New (BNIB)",
-                price: 750000,
-                image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=500&q=80",
+                price: 800000,
+                image: "https://drive.google.com/file/d/1HStbANmkkhvZzcuQdYmiWvrEZXx_rO6U/view?usp=drive_link
                 description: "Original PT Navya Retail Indonesia. Size US 8.5 / EUR 41 / 26.5 cm. Kondisi mulus lengkap dengan box."
             },
             {
                 id: 2,
-                name: "Kamera Mirrorless Sony A6000",
-                category: "Elektronik",
+                name: "Converse Asep",
+                category: "Seaptu",
                 condition: "92% Mulus",
-                price: 4750000,
-                image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=500&q=80",
+                price: 900000,
+                image: "https://drive.google.com/file/d/1uQJyJodCdX9_VXrxOnXBSzC3R88UfbJz/view?usp=drive_link,
                 description: "Normal jaya, kelengkapan body, lensa kit 16-50mm, strap, dan baterai."
             },
             {
@@ -398,24 +398,6 @@
                 price: 750000,
                 image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80",
                 description: "Baterai sangat awet, suara jernih bass mantap, lengkap dus buku."
-            },
-            {
-                id: 7,
-                name: "Sneakers Casual Streetwear",
-                category: "Fashion",
-                condition: "88% Layak Pakai",
-                price: 250000,
-                image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80",
-                description: "Ukuran 42, sol masih tebal, sudah dicuci bersih siap pakai."
-            },
-            {
-                id: 8,
-                name: "Lampu Meja Belajar Estetik",
-                category: "Furnitur",
-                condition: "96% Berfungsi",
-                price: 90000,
-                image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=500&q=80",
-                description: "Lampu LED tiga mode warna cahaya, fleksibel dan modern."
             }
         ];
 
