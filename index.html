@@ -328,7 +328,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
-                &copy; <span id="current-year"></span> Lakuin Yup - Kewirausahaan G331. Hak Cipta Dilindungi.
+                &copy; <span id="current-year"></span> Lakuin Yup - Ferdi, Septian, Rendra, Thoriq, Daniel~Kewirausahaan G331. Hak Cipta Dilindungi.
             </div>
         </div>
     </footer>
@@ -481,7 +481,7 @@
         // Tombol Tanya Produk Tertentu via WhatsApp
         function askProduct(productName, productPrice) {
             const formattedPrice = formatRupiah(productPrice);
-            const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya mau titip jual barang dong "${productName}" dengan harga ${formattedPrice}.`);
+            const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya mau titip jual barang dong "${productName}");
             window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
         }
 
