@@ -42,14 +42,19 @@
                     </a>
                 </div>
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center font-medium">
+                <div class="hidden md:flex space-x-6 items-center font-medium">
                     <a href="#beranda" class="hover:text-primary transition">Beranda</a>
                     <a href="#tentang" class="hover:text-primary transition">Tentang</a>
                     <a href="#katalog" class="hover:text-primary transition">Katalog</a>
                     <a href="#faq" class="hover:text-primary transition">Syarat & Ketentuan</a>
-                    <a href="#" onclick="openWhatsAppChat()" class="bg-primary text-white px-4 py-2 rounded-full font-medium hover:bg-teal-700 transition shadow-sm">
-                        <i class="fa-brands fa-whatsapp mr-1"></i> Chat Now
-                    </a>
+                    <div class="flex items-center gap-2">
+                        <a href="https://www.instagram.com/laku.in.yup/" target="_blank" class="bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 text-white px-3.5 py-2 rounded-full font-medium hover:opacity-90 transition shadow-sm flex items-center gap-1.5 text-sm" title="Kunjungi Instagram">
+                            <i class="fa-brands fa-instagram"></i> IG
+                        </a>
+                        <a href="#" onclick="openWhatsAppChat()" class="bg-primary text-white px-4 py-2 rounded-full font-medium hover:bg-teal-700 transition shadow-sm flex items-center gap-1.5 text-sm">
+                            <i class="fa-brands fa-whatsapp"></i> Chat Now
+                        </a>
+                    </div>
                 </div>
                 <!-- Mobile Hamburger Button -->
                 <div class="md:hidden flex items-center">
@@ -65,9 +70,14 @@
             <a href="#tentang" class="block py-2 text-gray-700 hover:text-primary">Tentang</a>
             <a href="#katalog" class="block py-2 text-gray-700 hover:text-primary">Katalog</a>
             <a href="#faq" class="block py-2 text-gray-700 hover:text-primary">Syarat & Ketentuan</a>
-            <a href="#" onclick="openWhatsAppChat()" class="block text-center bg-primary text-white py-2 rounded-lg font-medium hover:bg-teal-700">
-                <i class="fa-brands fa-whatsapp mr-1"></i> Chat Now
-            </a>
+            <div class="grid grid-cols-2 gap-2 pt-2">
+                <a href="https://www.instagram.com/laku.in.yup/" target="_blank" class="text-center bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 text-white py-2 rounded-lg font-medium hover:opacity-90 flex items-center justify-center gap-1 text-sm">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+                <a href="#" onclick="openWhatsAppChat()" class="text-center bg-primary text-white py-2 rounded-lg font-medium hover:bg-teal-700 flex items-center justify-center gap-1 text-sm">
+                    <i class="fa-brands fa-whatsapp"></i> Chat Now
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -295,10 +305,15 @@
         </div>
     </section>
 
-    <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="#" onclick="openWhatsAppChat()" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-xl hover:bg-green-600 transition z-50 animate-bounce" title="Chat WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <!-- FLOATING BUTTONS (WHATSAPP & INSTAGRAM) -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <a href="https://www.instagram.com/laku.in.yup/" target="_blank" class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-xl hover:opacity-90 transition animate-bounce" title="Kunjungi Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" onclick="openWhatsAppChat()" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-xl hover:bg-green-600 transition animate-bounce" title="Chat WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
 
     <!-- 7. FOOTER -->
     <footer class="bg-gray-900 text-gray-300 py-12">
