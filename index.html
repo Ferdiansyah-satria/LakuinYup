@@ -325,6 +325,7 @@
                 <div>
                     <h4 class="text-md font-semibold text-white mb-3">Kontak Admin</h4>
                     <p class="text-sm text-gray-400 mb-2"><i class="fa-brands fa-whatsapp mr-2 text-green-400"></i> WhatsApp: +62 812-3456-789</p>
+                    <p class="text-sm text-gray-400 mb-2"><i class="fa-brands fa-instagram mr-2 text-pink-400"></i> Instagram: <a href="https://instagram.com/laku.in.yup" target="_blank" class="hover:text-primary transition">@laku.in.yup</a></p>
                     <p class="text-sm text-gray-400"><i class="fa-solid fa-envelope mr-2 text-primary"></i> Email: halo@lakuinyup.com</p>
                 </div>
             </div>
@@ -351,7 +352,6 @@
                 price: 750000,
                 image: "https://i.ibb.co.com/0RX2bZ8v/Whats-App-Image-2026-10-04-at-14-38-03.jpg",
                 description: "Original PT Navya Retail Indonesia. Size US 8.5 / EUR 41 / 26.5 cm. Kondisi mulus lengkap dengan box."
-        
             }
         ];
 
@@ -483,7 +483,7 @@
         // Tombol Tanya Produk Tertentu via WhatsApp
         function askProduct(productName, productPrice) {
             const formattedPrice = formatRupiah(productPrice);
-            const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya mau titip jual barang dong "${productName}" );
+            const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya mau titip jual barang dong "${productName}" dengan harga ${formattedPrice}.`);
             window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
         }
 
