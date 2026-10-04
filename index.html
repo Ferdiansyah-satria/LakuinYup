@@ -83,7 +83,7 @@
                         Wadah Titip Jual, Rekber, dan Promosi barang di Kampus Jadi <span class="text-primary">Lebih Gampang</span>
                     </h1>
                     <p class="text-lg text-gray-600">
-                        Dari mahasiswa, oleh mahasiswa, untuk mahasiswa. Platform titip barang di lingkup kampus UPNVJT .
+                        Dari mahasiswa, oleh mahasiswa, untuk mahasiswa. Platform titip barang di lingkup kampus UPNVJT.
                     </p>
                     <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
                         <a href="#katalog" class="bg-primary text-white px-6 py-3 rounded-xl font-semibold text-center hover:bg-teal-700 transition shadow-lg shadow-teal-500/20">
@@ -95,22 +95,22 @@
                     </div>
                 </div>
                 
-                <!-- Hero Image Slider / Foto Scroll Container -->
+                <!-- Hero Image Slider / Foto Scroll Container (Clean Look Images) -->
                 <div class="relative flex justify-center">
                     <div class="w-full max-w-md bg-white p-4 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden">
-                        <!-- Carousel Wrapper dengan 3 Foto -->
+                        <!-- Carousel Wrapper dengan 3 Foto Clean Look -->
                         <div id="hero-carousel" class="relative h-72 rounded-2xl overflow-hidden bg-gray-100">
                             <!-- Slide 1 -->
                             <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100">
-                                <img src="https://i.ibb.co.com/0RX2bZ8v/Whats-App-Image-2026-10-04-at-14-38-03.jpg" alt="Vans Authentic Detail 1" class="w-full h-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Clean Look Produk 1" class="w-full h-full object-cover">
                             </div>
                             <!-- Slide 2 -->
                             <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
-                                <img src="https://i.ibb.co.com/0RX2bZ8v/Whats-App-Image-2026-10-04-at-14-38-03.jpg" alt="Vans Authentic Detail 2" class="w-full h-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Clean Look Produk 2" class="w-full h-full object-cover">
                             </div>
                             <!-- Slide 3 -->
                             <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
-                                <img src="https://i.ibb.co.com/0RX2bZ8v/Whats-App-Image-2026-10-04-at-14-38-03.jpg" alt="Vans Authentic Detail 3" class="w-full h-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=80" alt="Clean Look Produk 3" class="w-full h-full object-cover">
                             </div>
                         </div>
 
@@ -191,7 +191,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">Katalog Layanan Laku.in Yup</h2>
-                <p class="text-gray-600">Layanan Titip Barang dan Promosi</p>
+                <p class="text-gray-600">Pilihan Jasa Layanan Titip Barang, Paid Promote, dan Rekber</p>
             </div>
 
             <!-- Filter & Search Bar -->
@@ -207,18 +207,18 @@
                         <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
                             <i class="fa-solid fa-search"></i>
                         </span>
-                        <input type="text" id="search-input" onkeyup="searchProducts()" placeholder="Cari nama barang..." class="w-full pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary">
+                        <input type="text" id="search-input" onkeyup="searchProducts()" placeholder="Cari layanan..." class="w-full pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-primary">
                     </div>
                 </div>
             </div>
 
-            <!-- Grid Produk -->
-            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Produk dirender otomatis via JavaScript -->
+            <!-- Grid Layanan -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Layanan dirender otomatis via JavaScript -->
             </div>
             
             <div id="no-product" class="hidden text-center py-12">
-                <p class="text-gray-500 font-medium">Barang yang kamu cari tidak ditemukan.</p>
+                <p class="text-gray-500 font-medium">Layanan yang kamu cari tidak ditemukan.</p>
             </div>
         </div>
     </section>
@@ -328,7 +328,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
-                &copy; <span id="current-year"></span> Lakuin Yup - Ferdi, Septian, Rendra, Thoriq, Daniel~Kewirausahaan G331. Hak Cipta Dilindungi.
+                &copy; <span id="current-year"></span> Lakuin Yup - Ferdi, Septian, Rendra, Thoriq, Daniel ~ Kewirausahaan G331. Hak Cipta Dilindungi.
             </div>
         </div>
     </footer>
@@ -340,43 +340,34 @@
         // ==========================================
         const ADMIN_WHATSAPP_NUMBER = "6281232713151"; 
 
-        // Data Produk Katalog (Ditambahkan 3 barang baru selain Daniel Uget Uget)
+        // Data Katalog Jasa Layanan Laku.in Yup
         const productsData = [
             {
                 id: 1,
-                name: "Daniel Uget Uget",
+                name: "Jasa Titip Jual Barang Kampus",
                 category: "Titip Barang",
-                condition: "Like New (BNIB)",
-                price: 20000000,
-                image: "https://i.ibb.co.com/Ndy9ScJX/Whats-App-Image-2026-10-05-at-00-51-58.jpg",
-                description: "Mulus no Minus"
+                condition: "Proses Cepat",
+                price: 10000,
+                image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80",
+                description: "Titipkan barang preloved / baru kamu ke kami. Foto & deskripsi dibantu upload ke feed Instagram dan web."
             },
             {
                 id: 2,
-                name: "Kemeja Flanel Casual",
-                category: "Titip Barang",
-                condition: "95% Mulus",
-                price: 85000,
-                image: "https://i.ibb.co.com/0RX2bZ8v/Whats-App-Image-2026-10-04-at-14-38-03.jpg",
-                description: "Kemeja flanel nyaman dipakai ke kampus, ukuran L, bahan tebal."
+                name: "Paid Promote Feed & Story",
+                category: "Paid Promote",
+                condition: "Slot Tersedia",
+                price: 15000,
+                image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+                description: "Promosikan usaha, event, atau open recruitment organisasi kamu ke audiens mahasiswa aktif UPNVJT."
             },
             {
                 id: 3,
-                name: "Paket Paid Promote Feed",
-                category: "Paid Promote",
-                condition: "Slot Aktif",
-                price: 25000,
-                image: "https://i.ibb.co.com/0RX2bZ8v/Whats-App-Image-2026-10-04-at-14-38-03.jpg",
-                description: "Promo poster event/usaha kamu di feed Instagram @laku.in.yup selama 3 hari."
-            },
-            {
-                id: 4,
-                name: "Jasa Rekber Transaksi Kampus",
+                name: "Jasa Rekening Bersama (Rekber)",
                 category: "Rekber",
-                condition: "Aman & Terpercaya",
+                condition: "100% Aman",
                 price: 5000,
-                image: "https://i.ibb.co.com/0RX2bZ8v/Whats-App-Image-2026-10-04-at-14-38-03.jpg",
-                description: "Layanan rekening bersama aman untuk transaksi jual beli antar mahasiswa UPNVJT."
+                image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80",
+                description: "Transaksi jual beli aman antar mahasiswa di lingkungan kampus dengan pengawasan langsung dari admin."
             }
         ];
 
@@ -470,7 +461,7 @@
                     </div>
                     <div class="p-4 pt-0">
                         <button onclick="askProduct('${product.name}', ${product.price})" class="w-full bg-gray-100 hover:bg-primary hover:text-white text-gray-800 text-sm font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-lg"></i> Tanya Barang Ini
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Pesan Layanan Ini
                         </button>
                     </div>
                 `;
@@ -501,14 +492,14 @@
 
         // Tombol Chat Umum via WhatsApp
         function openWhatsAppChat() {
-            const message = encodeURIComponent("Halo Admin Lakuin Yup, saya ingin titip jual barang dong.");
+            const message = encodeURIComponent("Halo Admin Lakuin Yup, saya ingin menggunakan layanan titip jual/promosi.");
             window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
         }
 
         // Tombol Tanya Produk Tertentu via WhatsApp
         function askProduct(productName, productPrice) {
             const formattedPrice = formatRupiah(productPrice);
-            const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya mau tanya atau titip jual barang "${productName}" dengan harga ${formattedPrice}.`);
+            const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya ingin memesan layanan "${productName}" dengan estimasi biaya ${formattedPrice}.`);
             window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
         }
 
