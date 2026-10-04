@@ -71,7 +71,7 @@
         </div>
     </nav>
 
-    <!-- 2. HERO SECTION -->
+    <!-- 2. HERO SECTION DENGAN SLIDER 3 FOTO -->
     <section id="beranda" class="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-teal-50 via-white to-yellow-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -94,9 +94,30 @@
                         </a>
                     </div>
                 </div>
+                <!-- Hero Image Carousel -->
                 <div class="relative flex justify-center">
-                    <div class="w-full max-w-md bg-white p-4 rounded-3xl shadow-xl border border-gray-100 relative">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Preloved Items" class="rounded-2xl w-full h-64 object-cover">
+                    <div class="w-full max-w-md bg-white p-4 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden">
+                        <!-- Carousel Wrapper -->
+                        <div id="hero-carousel" class="relative h-64 rounded-2xl overflow-hidden">
+                            <!-- Slide 1 -->
+                            <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100">
+                                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Slide 1" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
+                                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80" alt="Slide 2" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Slide 3" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- Carousel Indicators -->
+                        <div class="flex justify-center gap-2 mt-3">
+                            <button onclick="currentSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-primary transition"></button>
+                            <button onclick="currentSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition"></button>
+                            <button onclick="currentSlide(2)" class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition"></button>
+                        </div>
                         <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border border-gray-100 flex items-center gap-3">
                             <div class="bg-teal-100 text-primary p-3 rounded-xl text-xl">
                                 <i class="fa-solid fa-shield-check"></i>
@@ -226,7 +247,7 @@
                         <i id="icon-2" class="fa-solid fa-chevron-down transition-transform"></i>
                     </button>
                     <div id="content-2" class="hidden p-5 text-sm text-gray-600 bg-white border-t border-gray-100">
-                        Barang yang dijual adalah barang bekas (preloved). Tingkat kemulusan (misal: 90%, 95%) dijelaskan secara jujur pada deskripsi produk. Silakan tanyakan detail tambahan melalui chat jika diperlukan.
+                        Barang yang dijual adalah barang bekas (preloved) berkualitas tinggi. Tingkat kemulusan dan detail kelengkapan dijelaskan secara jujur pada deskripsi produk. Silakan tanyakan detail tambahan melalui chat jika diperlukan.
                     </div>
                 </div>
 
@@ -322,10 +343,19 @@
         // ==========================================
         const ADMIN_WHATSAPP_NUMBER = "628123456789"; // Ganti dengan nomor WhatsApp Anda (format internasional tanpa + atau 0)
 
-        // Data Produk Katalog (Bisa diedit atau ditambah sesuai kebutuhan)
+        // Data Produk Katalog (Termasuk Vans Authentic terbaru)
         const productsData = [
             {
                 id: 1,
+                name: "Vans Authentic Embroidered Checker Black",
+                category: "Fashion",
+                condition: "99% Like New (BNIB)",
+                price: 750000,
+                image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=500&q=80",
+                description: "Original PT Navya Retail Indonesia. Size US 8.5 / EUR 41 / 26.5 cm. Kondisi mulus lengkap dengan box."
+            },
+            {
+                id: 2,
                 name: "Kamera Mirrorless Sony A6000",
                 category: "Elektronik",
                 condition: "92% Mulus",
@@ -334,7 +364,7 @@
                 description: "Normal jaya, kelengkapan body, lensa kit 16-50mm, strap, dan baterai."
             },
             {
-                id: 2,
+                id: 3,
                 name: "Hoodie Vintage Oversized",
                 category: "Fashion",
                 condition: "95% Seperti Baru",
@@ -343,7 +373,7 @@
                 description: "Bahan cotton fleece tebal, warna pekat tidak luntur, ukuran L."
             },
             {
-                id: 3,
+                id: 4,
                 name: "Meja Kerja Minimalis Kayu Jati",
                 category: "Furnitur",
                 condition: "90% Kokoh",
@@ -352,7 +382,7 @@
                 description: "Kondisi kuat, ada sedikit lecet pemakaian wajar di bagian kaki meja."
             },
             {
-                id: 4,
+                id: 5,
                 name: "Gitar Akustik Elektrik Yamaha",
                 category: "Hobi",
                 condition: "93% Mulus",
@@ -361,7 +391,7 @@
                 description: "Sound nyaring, EQ aktif normal, senar baru diganti."
             },
             {
-                id: 5,
+                id: 6,
                 name: "Headphone Bluetooth Noise Cancelling",
                 category: "Elektronik",
                 condition: "98% Like New",
@@ -370,7 +400,7 @@
                 description: "Baterai sangat awet, suara jernih bass mantap, lengkap dus buku."
             },
             {
-                id: 6,
+                id: 7,
                 name: "Sneakers Casual Streetwear",
                 category: "Fashion",
                 condition: "88% Layak Pakai",
@@ -379,22 +409,13 @@
                 description: "Ukuran 42, sol masih tebal, sudah dicuci bersih siap pakai."
             },
             {
-                id: 7,
+                id: 8,
                 name: "Lampu Meja Belajar Estetik",
                 category: "Furnitur",
                 condition: "96% Berfungsi",
                 price: 90000,
                 image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=500&q=80",
                 description: "Lampu LED tiga mode warna cahaya, fleksibel dan modern."
-            },
-            {
-                id: 8,
-                name: "Boardgame Strategi Koleksi",
-                category: "Hobi",
-                condition: "99% Lengkap",
-                price: 320000,
-                image: "https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=500&q=80",
-                description: "Komponen kartu lengkap ber-sleeves, kotak mulus tidak penyok."
             }
         ];
 
@@ -410,6 +431,33 @@
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Hero Image Carousel Script
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.opacity = i === index ? '1' : '0';
+            });
+            dots.forEach((dot, i) => {
+                dot.className = i === index ? 'carousel-dot w-3 h-3 rounded-full bg-primary transition' : 'carousel-dot w-3 h-3 rounded-full bg-gray-300 transition';
+            });
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto slide setiap 3.5 detik
+        setInterval(nextSlide, 3500);
 
         // Format angka ke Rupiah
         function formatRupiah(angka) {
