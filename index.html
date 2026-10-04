@@ -476,14 +476,14 @@
 
         // Tombol Chat Umum via WhatsApp
         function openWhatsAppChat() {
-            const message = encodeURIComponent("Halo Admin Lakuin Yup, saya mahasiswa UPNVJT ingin bertanya seputar titip jual atau produk preloved.");
+            const message = encodeURIComponent("Halo Admin Lakuin Yup, saya ingin titip jual barang dong.");
             window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
         }
 
         // Tombol Tanya Produk Tertentu via WhatsApp
         function askProduct(productName, productPrice) {
             const formattedPrice = formatRupiah(productPrice);
-            const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya tertarik dan ingin bertanya mengenai barang "${productName}" dengan harga ${formattedPrice}. Apakah masih tersedia?`);
+            const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya mau titip jual barang dong "${productName}" );
             window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
         }
 
