@@ -481,7 +481,7 @@
         // Tombol Tanya Produk Tertentu via WhatsApp
         function askProduct(productName, productPrice) {
             const formattedPrice = formatRupiah(productPrice);
-            const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya mau titip jual barang dong "${productName}");
+            const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya mau titip jual barang dong.");
             window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
         }
 
