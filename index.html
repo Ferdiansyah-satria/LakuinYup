@@ -340,7 +340,7 @@
         // ==========================================
         const ADMIN_WHATSAPP_NUMBER = "6281232713151"; 
 
-        // Data Produk Katalog
+        // Data Produk Katalog (Ditambahkan 3 barang baru selain Daniel Uget Uget)
         const productsData = [
             {
                 id: 1,
@@ -350,6 +350,33 @@
                 price: 20000000,
                 image: "https://i.ibb.co.com/Ndy9ScJX/Whats-App-Image-2026-10-05-at-00-51-58.jpg",
                 description: "Mulus no Minus"
+            },
+            {
+                id: 2,
+                name: "Kemeja Flanel Casual",
+                category: "Titip Barang",
+                condition: "95% Mulus",
+                price: 85000,
+                image: "https://i.ibb.co.com/0RX2bZ8v/Whats-App-Image-2026-10-04-at-14-38-03.jpg",
+                description: "Kemeja flanel nyaman dipakai ke kampus, ukuran L, bahan tebal."
+            },
+            {
+                id: 3,
+                name: "Paket Paid Promote Feed",
+                category: "Paid Promote",
+                condition: "Slot Aktif",
+                price: 25000,
+                image: "https://i.ibb.co.com/0RX2bZ8v/Whats-App-Image-2026-10-04-at-14-38-03.jpg",
+                description: "Promo poster event/usaha kamu di feed Instagram @laku.in.yup selama 3 hari."
+            },
+            {
+                id: 4,
+                name: "Jasa Rekber Transaksi Kampus",
+                category: "Rekber",
+                condition: "Aman & Terpercaya",
+                price: 5000,
+                image: "https://i.ibb.co.com/0RX2bZ8v/Whats-App-Image-2026-10-04-at-14-38-03.jpg",
+                description: "Layanan rekening bersama aman untuk transaksi jual beli antar mahasiswa UPNVJT."
             }
         ];
 
@@ -481,7 +508,7 @@
         // Tombol Tanya Produk Tertentu via WhatsApp
         function askProduct(productName, productPrice) {
             const formattedPrice = formatRupiah(productPrice);
-            const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya mau titip jual barang dong.");
+            const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya mau tanya atau titip jual barang "${productName}" dengan harga ${formattedPrice}.`);
             window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
         }
 
