@@ -150,7 +150,7 @@
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Tentang Lakuin Yup</h2>
                 <p class="text-gray-600">
-                    Lakuin Yup hadir sebagai platform preloved mahasiswa UPNVJT yang digagas dari mahasiswa, oleh mahasiswa, dan untuk mahasiswa. Solusi tepat untuk jual beli barang kampus secara praktis dan aman.
+                    Lakuin Yup hadir sebagai platform titip jual barang mahasiswa UPNVJT yang digagas dari mahasiswa, oleh mahasiswa, dan untuk mahasiswa. Solusi tepat untuk jual beli barang kampus secara praktis dan aman.
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -191,7 +191,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">Katalog Pilihan</h2>
-                <p class="text-gray-600">Cari barang preloved impianmu di sini</p>
+                <p class="text-gray-600">Titip barang mu di sini</p>
             </div>
 
             <!-- Filter & Search Bar -->
@@ -310,7 +310,7 @@
                         <i class="fa-solid fa-bag-shopping text-primary"></i> Lakuin Yup
                     </h3>
                     <p class="text-sm text-gray-400">
-                        Platform preloved mahasiswa UPNVJT. Titip jual atau cari barang bekas di kampus jadi lebih gampang. Dari mahasiswa, oleh mahasiswa, untuk mahasiswa.
+                        Platform Titip jual barang mahasiswa UPNVJT. Titip jual barang di kampus jadi lebih gampang. Dari mahasiswa, oleh mahasiswa, untuk mahasiswa.
                     </p>
                 </div>
                 <div>
@@ -326,11 +326,11 @@
                     <h4 class="text-md font-semibold text-white mb-3">Kontak Admin</h4>
                     <p class="text-sm text-gray-400 mb-2"><i class="fa-brands fa-whatsapp mr-2 text-green-400"></i> WhatsApp: +62 812-3456-789</p>
                     <p class="text-sm text-gray-400 mb-2"><i class="fa-brands fa-instagram mr-2 text-pink-400"></i> Instagram: <a href="https://instagram.com/laku.in.yup" target="_blank" class="hover:text-primary transition">@laku.in.yup</a></p>
-                    <p class="text-sm text-gray-400"><i class="fa-solid fa-envelope mr-2 text-primary"></i> Email: halo@lakuinyup.com</p>
+                    <
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
-                &copy; <span id="current-year"></span> Lakuin Yup - UPN Veteran Jawa Timur. Hak Cipta Dilindungi.
+                &copy; <span id="current-year"></span> Lakuin Yup - Kewirausahaan G331. Hak Cipta Dilindungi.
             </div>
         </div>
     </footer>
@@ -340,7 +340,7 @@
         // ==========================================
         // CONFIGURATION: EDIT NOMOR WHATSAPP DI SINI
         // ==========================================
-        const ADMIN_WHATSAPP_NUMBER = "628123456789"; 
+        const ADMIN_WHATSAPP_NUMBER = "6281232713151"; 
 
         // Data Produk Katalog
         const productsData = [
@@ -477,14 +477,14 @@
         // Tombol Chat Umum via WhatsApp
         function openWhatsAppChat() {
             const message = encodeURIComponent("Halo Admin Lakuin Yup, saya ingin titip jual barang dong.");
-            window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
+            window.open(`https://wa.me/${6281232713151}?text=${message}`, '_blank');
         }
 
         // Tombol Tanya Produk Tertentu via WhatsApp
         function askProduct(productName, productPrice) {
             const formattedPrice = formatRupiah(productPrice);
             const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya mau titip jual barang dong "${productName}" dengan harga ${formattedPrice}.`);
-            window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
+            window.open(`https://wa.me/${6281232713151}?text=${message}`, '_blank');
         }
 
         // Accordion Toggle S&K
