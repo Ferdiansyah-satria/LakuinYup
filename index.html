@@ -200,7 +200,7 @@
                     <button onclick="filterCategory('Semua')" class="cat-btn active px-4 py-2 rounded-xl text-sm font-medium bg-primary text-white shadow-sm transition">Semua</button>
                     <button onclick="filterCategory('Titip Barang')" class="cat-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-gray-700 border hover:bg-gray-100 transition">Titip Barang</button>
                     <button onclick="filterCategory('Paid Promote')" class="cat-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-gray-700 border hover:bg-gray-100 transition">Paid Promote</button>
-                    <button onclick="filterCategory('(Rekber) Rekening Bersama')" class="cat-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-gray-700 border hover:bg-gray-100 transition">Rekber</button>
+                    <button onclick="filterCategory('Rekber')" class="cat-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-gray-700 border hover:bg-gray-100 transition">Rekber</button>
                 </div>
                 <div class="w-full md:w-72">
                     <div class="relative">
@@ -323,7 +323,7 @@
                 </div>
                 <div>
                     <h4 class="text-md font-semibold text-white mb-3">Kontak Admin</h4>
-                    <p class="text-sm text-gray-400 mb-2"><i class="fa-brands fa-whatsapp mr-2 text-green-400"></i> WhatsApp: +62 812-3456-789</p>
+                    <p class="text-sm text-gray-400 mb-2"><i class="fa-brands fa-whatsapp mr-2 text-green-400"></i> WhatsApp: +62 812-3271-3151</p>
                     <p class="text-sm text-gray-400 mb-2"><i class="fa-brands fa-instagram mr-2 text-pink-400"></i> Instagram: <a href="https://instagram.com/laku.in.yup" target="_blank" class="hover:text-primary transition">@laku.in.yup</a></p>
                 </div>
             </div>
@@ -348,7 +348,7 @@
                 category: "Titip Barang",
                 condition: "Like New (BNIB)",
                 price: 20000000,
-                image: "https://ibb.co.com/cSr6L4ZP"><img src="https://i.ibb.co.com/Ndy9ScJX/Whats-App-Image-2026-10-05-at-00-51-58.jpg" alt="Whats-App-Image-2026-10-05-at-00-51-58" border="0"></a>",
+                image: "https://i.ibb.co.com/Ndy9ScJX/Whats-App-Image-2026-10-05-at-00-51-58.jpg",
                 description: "Original PT Navya Retail Indonesia. Size US 8.5 / EUR 41 / 26.5 cm. Kondisi mulus lengkap dengan box."
             }
         ];
@@ -475,14 +475,14 @@
         // Tombol Chat Umum via WhatsApp
         function openWhatsAppChat() {
             const message = encodeURIComponent("Halo Admin Lakuin Yup, saya ingin titip jual barang dong.");
-            window.open(`https://wa.me/${6281232713151}?text=${message}`, '_blank');
+            window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
         }
 
         // Tombol Tanya Produk Tertentu via WhatsApp
         function askProduct(productName, productPrice) {
             const formattedPrice = formatRupiah(productPrice);
             const message = encodeURIComponent(`Halo Admin Lakuin Yup, saya mau titip jual barang dong "${productName}" dengan harga ${formattedPrice}.`);
-            window.open(`https://wa.me/${6281232713151}?text=${message}`, '_blank');
+            window.open(`https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${message}`, '_blank');
         }
 
         // Accordion Toggle S&K
